@@ -44,7 +44,7 @@ class XWalkNotificationManager {
 
   void NotificationDisplayed(NotifyNotification* notification);
   void NotificationClicked(NotifyNotification* notification);
-  void NotificationClosed(NotifyNotification* notification, bool by_user);
+  void NotificationClosed(NotifyNotification* notification);
 
  private:
   base::ScopedPtrHashMap<int64, content::DesktopNotificationDelegate>
