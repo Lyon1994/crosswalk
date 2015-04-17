@@ -101,7 +101,8 @@ class XWalkFrameHelper
   }
 
 #if defined(OS_TIZEN)
-  void DidCommitProvisionalLoad(bool is_new_navigation) override {
+  void DidCommitProvisionalLoad(bool is_new_navigation,
+                                bool is_same_page_navigation) override {
     blink::WebLocalFrame* frame = render_frame()->GetWebFrame();
     GURL url(frame->document().url());
     if (url.SchemeIs(application::kApplicationScheme)) {
